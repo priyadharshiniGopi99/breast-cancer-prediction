@@ -33,7 +33,7 @@ This project is a Machine Learning-based web application that predicts whether a
 ## 📊 Dataset
 
 * Breast Cancer Wisconsin Dataset
-* 30 features used for prediction
+* 10 features used for prediction
 
 ---
 
