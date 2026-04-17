@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breast Cancer Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🧬 Breast Cancer Prediction System</h1>
+
+    <div class="main">
+
+        <!-- FORM -->
+        <div class="card form-card">
+            <h2>Patient Data</h2>
+
+            <form action="/predict" method="post">
+                <input type="number" step="any" name="radius_mean" placeholder="Radius Mean" required>
+                <input type="number" step="any" name="perimeter_mean" placeholder="Perimeter Mean" required>
+                <input type="number" step="any" name="area_mean" placeholder="Area Mean" required>
+                <input type="number" step="any" name="concavity_mean" placeholder="Concavity Mean" required>
+                <input type="number" step="any" name="concave_points_mean" placeholder="Concave Points Mean" required>
+                <input type="number" step="any" name="fractal_dimension_mean" placeholder="Fractal Dimension Mean" required>
+                <input type="number" step="any" name="radius_worst" placeholder="Radius Worst" required>
+                <input type="number" step="any" name="perimeter_worst" placeholder="Perimeter Worst" required>
+                <input type="number" step="any" name="area_worst" placeholder="Area Worst" required>
+                <input type="number" step="any" name="concavity_worst" placeholder="Concavity Worst" required>
+                <input type="number" step="any" name="fractal_dimension_worst" placeholder="Fractal Dimension Worst" required>
+
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+
+        <!-- BEST PREDICTION -->
+        <div class="card">
+            <h2>Best Prediction</h2>
+
+            {% if best_result %}
+                <div class="best-box">
+                    <p>Best Algorithm</p>
+                    <h3>{{ best_algo }}</h3>
+
+                    <p>Prediction</p>
+                    <h1>{{ best_result }}</h1>
+                </div>
+            {% else %}
+                <div class="placeholder">
+                    Prediction will appear here
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- ALL PREDICTIONS -->
+        <div class="card">
+            <h2>Algorithm Predictions</h2>
+
+            {% if predictions %}
+                <table>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th>Prediction</th>
+                    </tr>
+
+                    {% for algo, pred in predictions.items() %}
+                    <tr>
+                        <td>{{ algo }}</td>
+                        <td>{{ pred }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <div class="placeholder">
+                    Results will appear here
+                </div>
+            {% endif %}
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

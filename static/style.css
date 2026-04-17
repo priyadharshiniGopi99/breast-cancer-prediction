@@ -1,0 +1,132 @@
+/* Background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #de1aa7, #ec1d6d);
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Layout */
+.main {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* prevents stretching */
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 32%;
+    height: fit-content;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Form Inputs */
+.form-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+button {
+    margin-top: 10px;
+    padding: 12px;
+    width: 100%;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* BEST PREDICTION BOX */
+.best-box {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    height: 220px;              /* ✅ fixed height like image */
+    border-radius: 20px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+/* Text inside best box */
+.best-box p {
+    margin: 5px 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.best-box h3 {
+    margin: 5px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.best-box h1 {
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Placeholder */
+.placeholder {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    background: #e75480;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover effect */
+.best-box:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
